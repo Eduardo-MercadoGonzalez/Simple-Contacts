@@ -19,6 +19,7 @@ android {
         versionCode 104
         versionName "6.22.4"
         setProperty("archivesBaseName", "contacts")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
@@ -72,4 +73,12 @@ dependencies {
     kapt "androidx.room:room-compiler:2.5.1"
     implementation "androidx.room:room-runtime:2.5.1"
     annotationProcessor "androidx.room:room-compiler:2.5.1"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.0-alpha01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    debugImplementation "androidx.tracing:tracing:1.1.0"
+
 }
